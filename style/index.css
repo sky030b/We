@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+/* base -------------------------------------------- */
+
+.base {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.base-project {
+    /* background-color: #f6f6f6; */
+    background-image: linear-gradient(#f6f6f6 0, #fff 50%);
+}
+
+.base-intro {
+    background-image: url(../images/intro-bg.jpg);
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 10%, 100% 85%, 0 100%) 
+}
+
+.base-intro::before {
+    content: "";
+    /* display: block; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.base-intro .base-head,
+.base-intro .base-btns {
+    text-align: left;
+    /* letter-spacing: 0; 因為當時寫字距是寫在base-title裡面，所以不能寫在這*/
+}
+
+.base-intro .base-title {
+    letter-spacing: 0;
+}
+
+.base-intro .base-title-small,
+.base-intro .base-title-primary {
+    display: block;
+}
+
+.base-intro .base-title-small {
+    color: #ddd;
+    font-size: 2.5rem;
+}
+
+.base-intro .base-title-primary {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-top: .5rem;
+}
+
+.base-intro .base-btn {
+    border-color: #fff;
+    color: #fff;
+}
+
+.base-intro .base-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.base-build .base-body {
+    max-width: 400px;
+    margin-right: auto;
+}
+
+.base-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.base-body {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.base-head, .base-foot {
+    text-align: center;
+}
+
+.base-title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+
+.base-btn {
+    display: inline-block;
+    border: 2px solid #cf7688;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #cf7688;
+    transition-duration: .3s;
+}
+
+.base-btn:hover {
+    background-color: #f6cdd5;
+}
+
+/* service -------------------------------------------- */
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 33.33333%;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+    padding: 1.5rem 2rem;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    color: rgba(0, 0, 0, 0.7);
+    /* text-align: center; */
+}
+
+.service-title {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.service-desc {
+    line-height: 1.5;
+    font-size: .95rem;
+    text-align: justify;
+}
+
+.service-icons {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.service-icons .fa-solid {
+    color: #cf7688;
+}
+
+/* project -------------------------------------------- */
+
+.project-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    width: 20%;
+    /* border: #cf7688 solid 1px; */
+    text-align: center;
+}
+
+.project-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* intro -------------------------------------------- */
+
+.intro-desc {
+    color: #fff;
+    line-height: 1.7rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* background-color: orange; */
+}
+
+/* build -------------------------------------------- */
+
+.build-li {
+    /* background-color: pink; */
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    position: relative;
+}
+
+.build-li + .build-li {
+    margin-top: 2rem;
+}
+
+.build-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.build-desc {
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+.build-li::before, .build-li::after {
+    content: "";
+    /* color: aqua; */
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    /* background-color: chartreuse; */
+    width: 50%;
+    height: 100%;
+    transform: skew(-15deg);
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/* .build-content {
+    position: relative;
+    z-index: 1;
+} */
+
+.build-li::before {
+    left: -40px;
+}
+
+.build-li::after {
+    right: -40px;
+}
+
+.build-li-1, .build-li-1::before, .build-li-1::after {
+    background-color: #f5ba54;
+}
+
+.build-li-2, .build-li-2::before, .build-li-2::after {
+    background-color: #eaa666;
+}
+
+.build-li-3, .build-li-3::before, .build-li-3::after {
+    background-color: #cf7688;
+}
