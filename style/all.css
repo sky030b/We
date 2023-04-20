@@ -117,6 +117,20 @@ img {
     margin-bottom: 2rem;
 }
 
+.banner-title-line {
+    position: relative;
+}
+
+.banner-title-line::after {
+    content: "";
+    position: absolute;
+    border-top: solid 4px rgba(255, 255, 255, 0.493);
+    width: 1.5em;
+    bottom: -1rem;
+    left: 0;
+
+}
+
 .banner-small {
     display: block;
     text-transform: uppercase;
@@ -161,9 +175,17 @@ img {
     left: -.6rem;
 }
 
-
 .banner-desc {
     line-height: 1.6;
+}
+
+.banner-desc + .banner-desc {
+    margin-top: 1rem;
+}
+
+.banner-desc-lg {
+    font-size: 1.5rem;
+    line-height: 1.3;
 }
 
 .banner-btns {
@@ -190,6 +212,11 @@ img {
 .banner-img {
     max-width: 100%;
     height: auto;
+}
+
+.banner-img-fit {
+    height: 400px;
+    object-fit: cover;
 }
 
 .banner-img-mobile, .banner-img-pad {
@@ -228,9 +255,78 @@ img {
     margin-top: 3rem;
 }
 
+.banner-service .banner-img-fit {
+    object-position: 0 -244px;
+}
+
+.banner-about .banner-img-fit {
+    object-position: 0 -194px;
+}
 
 
+/* footer ----------------------------- */
+
+.footer {
+    background-color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 7rem 1rem 1rem;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+.footer-logo {
+    max-width: 40px;
+    height: auto;
+    margin-bottom: .5rem;
+}
+
+.footer-desc {
+    font-size: .9rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-ul {
+    display: flex;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .9rem;
+    text-transform: uppercase;
+    transition-duration: .3s;
+}
+
+.footer-li {
+    margin-left: 1rem;
+}
 
 
+.footer-link:hover {
+    color: #cf7688;
+}
 
+/* aside ----------------------------- */
 
+.aside {
+    position: fixed;
+    right: 1rem;
+    bottom: 15rem;
+    z-index: 10;
+}
+
+.aside-link {
+    color: rgba(0, 0, 0, 0.2);
+    transition-duration: .3s;
+}
+
+.aside-link:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.aside-link-top {
+    font-size: 3rem;
+}
