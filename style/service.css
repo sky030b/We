@@ -1,2 +1,54 @@
 @charset "utf-8";
 
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.card:hover .card-icon {
+    background-color: #cf7688;
+    color: #fff;
+}
+
+.card-head {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-desc {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.card-ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+    font-style: 0.95em;
+}
+
+.card-icon {
+    display: inline-block;
+    font-size: 2.5rem;
+    color: #cf7688;
+    border: 1px dashed #cf7688;
+    border-radius: 50%;
+    /* padding: 1rem; 
+    同下兩行 */
+    width: 5rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+    transition-duration: .3s;
+}
+
+/* .card + .card {
+    margin-left: 2rem;
+} 
+同 .grid gap in master.css*/

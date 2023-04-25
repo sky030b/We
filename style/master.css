@@ -4,7 +4,6 @@ body {
     background-color: #f6f6f6;
 }
 
-
 .main {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -32,4 +31,21 @@ body {
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.7);
     text-align: justify;
+}
+
+/* grid ----------------------------- */
+
+.grid {
+    display: grid;
+    /* grid-template-columns: 33.33333% 33.33333% 33.33333%; 效果同下*/
+    /* grid-template-columns: repeat(3, 1fr); 因為service三欄，works四欄，所以分兩個class*/
+    gap: 2rem;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
 }

@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+/* state ----------------------------- */
+
+.state {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-top: 5rem;
+    background-color: #fff;
+}
+
+.state-head {
+    text-align: center;
+}
+
+.state-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.state-desc {
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.state-body {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.state-ul {
+    display: flex;
+    justify-content: center;
+}
+
+.state-li {
+    text-align: center;
+    /* background-color: pink; */
+    /* padding-left: 3rem;
+    padding-right: 3rem; */
+    /* margin-left: 3rem;
+    margin-right: 3rem; */
+}
+
+.state-li + .state-li {
+    /* margin-left: 4rem; */
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.state-number, .state-unit, .state-term, .state-tips {
+    display: block;
+    /* margin-bottom: 1.5rem; */
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.state-unit, .state-term, .state-tips {
+    margin-top: 1rem;
+}
+
+.state-li .state-number, 
+.state-li .state-unit, 
+.state-li .state-term {
+    color: #3eb5fe;
+    font-weight: 600;
+}
+
+.state-li:nth-child(even) .state-number, 
+.state-li:nth-child(even) .state-unit, 
+.state-li:nth-child(even) .state-term {
+    color: #33d8ab;
+} 
+
+.state-number {
+    font-size: 5rem;
+}
+
+.state-unit {
+    font-size: 1.5rem;
+}
+
+.state-term {
+    font-size: 2rem;
+}
+
+.state-tips {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.state-img {
+    width: 100%;
+    height: auto;
+}
+
+/* state ----------------------------- */
+
+.env {
+    display: flex;
+    gap: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    /* align-items: center; */
+}
+
+.env-head {
+    width: 33.333333%;
+}
+
+.env-body {
+    width: 66.666666%;
+}
+
+.env-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.env-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.env-desc {
+    margin-top: 1rem;
+    text-align: justify;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.7);
+}
