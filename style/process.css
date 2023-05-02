@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* process ----------------------------- */
-
 .process-item {
     display: flex;
 }
@@ -59,7 +58,7 @@
     box-sizing: border-box;
 }
 
-.process-li:nth-child(n+3) {
+.process-li:nth-child(n + 3) {
     padding-top: 0rem;
 }
 
@@ -81,6 +80,41 @@
     line-height: 1.5;
 }
 
+/* Mediaquery -------------------------------------------- */
+@media screen and (max-width: 480px) {
+
+    /* process ----------------------------- */
+    .process-item, .process-ol {
+        flex-direction: column;
+    }
+
+    .process-head, .process-body, .process-li {
+        /* width: 100%;
+        box-sizing: border-box; */
+        /* 上下效果一樣 */
+        width: auto;
+    }
+
+    .process-head {
+        padding: 1rem;
+    }
+
+    .process-li {
+        /* padding: 1rem; */
+
+        padding: 0;
+        margin: 1rem;
+    }
+
+    /* .process-li + .process-li {
+        padding-top: 0;
+    } */
+    /* 以上註解區塊為一組，同開同關，且須關閉類似效果 */
+
+    .process-name {
+        text-align: center;
+    }
+}
 
 
 

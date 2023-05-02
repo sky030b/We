@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* base -------------------------------------------- */
-
 .base {
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -108,7 +107,6 @@
 }
 
 /* service -------------------------------------------- */
-
 .service-items {
     display: flex;
     flex-wrap: wrap;
@@ -148,7 +146,6 @@
 }
 
 /* project -------------------------------------------- */
-
 .project-items {
     display: flex;
     flex-wrap: wrap;
@@ -166,7 +163,6 @@
 }
 
 /* intro -------------------------------------------- */
-
 .intro-desc {
     color: #fff;
     line-height: 1.7rem;
@@ -176,7 +172,6 @@
 }
 
 /* build -------------------------------------------- */
-
 .build-li {
     /* background-color: pink; */
     padding-top: 1.5rem;
@@ -244,4 +239,37 @@
     background-color: #cf7688;
 }
 
+/* Mediaquery -------------------------------------------- */
+@media screen and (max-width: 480px) {
+    /* server ----------------------------- */
+    .service-items {
+        flex-direction: column;
+    }
 
+    .service-item {
+        width: 100%;
+        /* width: auto; */
+        /* 兩者相同，但僅限此處，auto可以理解成還原成原大小 */
+    }
+
+    /* project ----------------------------- */
+    .project-item {
+        width: 33.33333%;
+    }
+
+    /* base ----------------------------- */
+    .base-intro {
+        clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%) 
+    }
+    
+    .base-intro .base-head, 
+    .base-intro .base-btns {
+        text-align: center;
+    }
+
+    .base-build .base-body {
+        max-width: 55vw;
+        margin-right: auto;
+    }
+    
+}

@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/* *,
+*::after,
+*::before {
+    box-sizing: border-box;
+} */
+
 html {
     scroll-behavior: smooth;
 }
@@ -13,7 +19,6 @@ img {
 }
 
 /* helper ----------------------------- */
-
 .container {
     max-width: 1200px;
     box-sizing: border-box;
@@ -34,7 +39,6 @@ img {
 }
 
 /* header ----------------------------- */
-
 .header {
     display: flex;
     align-items: center;
@@ -93,7 +97,6 @@ img {
 }
 
 /* banner ----------------------------- */
-
 .banner {
     background-image: linear-gradient(135deg, #cf7688 20%, #f5ba54 100%);
     color: #fff;
@@ -268,7 +271,6 @@ img {
 
 
 /* footer ----------------------------- */
-
 .footer {
     background-color: #666;
     display: flex;
@@ -313,7 +315,6 @@ img {
 }
 
 /* aside ----------------------------- */
-
 .aside {
     position: fixed;
     right: 1rem;
@@ -334,8 +335,7 @@ img {
     font-size: 3rem;
 }
 
-/* animation -------------------------------------------- */
-/* 全站共用就放all.css，某頁面單用就放xxx.css */
+/* animation -------------------------------------------- *//* 全站共用就放all.css，某頁面單用就放xxx.css */
 
 .ani-move-downToUp, .ani-move-fadeIn-leftToRight {
     animation-fill-mode: forwards;
@@ -388,8 +388,9 @@ img {
 .ani-delay-7 {animation-delay: 1.4s;}
 
 /* Mediaquery -------------------------------------------- */
-
 @media screen and (max-width: 480px) {
+
+    /* header ----------------------------- */
     .header  {
         background-color: rgba(255, 255, 255, 0.7);
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -408,10 +409,148 @@ img {
         align-items: center;
     }
 
+    .header-img-logo {
+        opacity: .5;
+    }
+
     .header-ul {
         flex-direction: column;
         background-color: transparent;
     }
 
+    .header-body {
+        display: none;
+    }
 
+    .header-link {
+        font-size: 2rem;
+        display: block;
+        padding: .7rem 1rem;
+        text-align: center;
+    }
+
+    .header-foot {
+        display: block;
+    }
+
+    .header-btn {
+        display: inline-block;
+        padding: 0;
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer; 
+        /* 上一句for小台的電腦 */
+    }
+
+    .header-btn-bars {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header-btn-xmark {
+        color: #666;
+        position: absolute;
+        right: 1.3rem;
+        top: .75rem;
+    }
+
+    /* banner ----------------------------- */
+    .banner-container {
+        flex-direction: column;
+    }
+
+    .banner {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+    
+    .banner-body {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .banner-index .banner-head, 
+    .banner-index .banner-body,
+    .banner-head,
+    .banner-body {
+        width: 100%; 
+    }
+
+    .banner-index .banner-head, .banner-head {
+        padding-top: 5rem;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .banner-index .banner-body {
+        padding-top: 1rem;
+    }
+
+    .banner-index .banner-ul {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .banner-title {
+        font-size: 7vw;
+    }
+
+    .banner-title-line::after {
+        left: 50%;
+        margin-left: -1.5rem;
+    }    
+
+    .banner-small {
+        font-size: 5vw;
+    }
+
+    .banner-img-mobile {
+        width: 40vw;
+    }
+
+    .banner-img-desktop {
+        width: 70vw;
+        margin-left: 10vw;
+    }
+
+    .banner-img-pad {
+        width: 60vw;
+    }
+
+    .banner {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    }
+
+    .banner-about .banner-img-fit, 
+    .banner-service .banner-img-fit {
+        object-position: center;
+    }
+
+
+    /* footer ----------------------------- */    
+    .footer {
+        clip-path: none;
+        padding-top: 1rem;
+    }
+
+    /* .footer {
+        justify-content: center;
+    } */
+    /* 上面這句=下面這串 */
+    
+    .footer-head {
+        /* background-color: pink; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-body {
+        display: none;
+    }
+    
+    /* aside ----------------------------- */
+    .aside {
+        display: none;
+    }
 }
