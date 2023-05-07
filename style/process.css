@@ -100,15 +100,15 @@
     }
 
     .process-li {
-        /* padding: 1rem; */
+        padding: 1rem;
 
-        padding: 0;
-        margin: 1rem;
+        /* padding: 0;
+        margin: 1rem; */
     }
 
-    /* .process-li + .process-li {
+    .process-li + .process-li {
         padding-top: 0;
-    } */
+    }
     /* 以上註解區塊為一組，同開同關，且須關閉類似效果 */
 
     .process-name {
